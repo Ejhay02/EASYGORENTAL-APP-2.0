@@ -24,24 +24,24 @@ const State = {
 
 // ===== CAR DATA =====
 const cars = [
-  { id: 1, brand: 'Toyota Vios 1.3 E', category: 'Sedan', rating: 4.8, reviews: 42, features: ['Auto', 'AC', 'GPS'], price: 2500, plate: 'ABC-1234', fuel: 'Gasoline', seats: 5, transmission: 'Automatic', owner: 'Carlos M.', contact: '+63 912 345 6789', address: '213 Rizal Ave, San Pablo City, Laguna' },
-  { id: 2, brand: 'Honda City RS', category: 'Sedan', rating: 4.9, reviews: 38, features: ['CVT', 'AC', 'Bluetooth'], price: 3200, plate: 'DEF-5678', fuel: 'Gasoline', seats: 5, transmission: 'CVT', owner: 'Maria S.', contact: '+63 917 890 1234', address: '56 P. Burgos St, Metro Manila' },
-  { id: 3, brand: 'Mitsubishi Mirage G4', category: 'Sedan', rating: 4.6, reviews: 29, features: ['M/T', 'AC', 'Eco'], price: 1800, plate: 'GHI-9012', fuel: 'Gasoline', seats: 5, transmission: 'Manual', owner: 'Jose R.', contact: '+63 923 456 7890', address: '12 Mabini St, Cebu City' },
-  { id: 4, brand: 'Toyota Wigo', category: 'Hatchback', rating: 4.7, reviews: 35, features: ['Auto', 'AC', 'Compact'], price: 1500, plate: 'JKL-3456', fuel: 'Gasoline', seats: 5, transmission: 'Automatic', owner: 'Ana L.', contact: '+63 908 765 4321', address: '89 Torres St, Davao City' },
-  { id: 5, brand: 'Suzuki Swift GL', category: 'Hatchback', rating: 4.5, reviews: 22, features: ['M/T', 'AC', 'Sporty'], price: 2000, plate: 'MNO-7890', fuel: 'Gasoline', seats: 5, transmission: 'Manual', owner: 'Pedro D.', contact: '+63 915 678 9012', address: '34 Session Rd, Baguio City' },
-  { id: 6, brand: 'Honda Brio', category: 'Hatchback', rating: 4.6, reviews: 31, features: ['Auto', 'AC', 'Eco'], price: 1700, plate: 'PQR-1234', fuel: 'Gasoline', seats: 5, transmission: 'Automatic', owner: 'Sofia G.', contact: '+63 920 123 4567', address: '67 Delgado St, Iloilo City' },
-  { id: 7, brand: 'Toyota Fortuner 2.4 G', category: 'SUV', rating: 4.9, reviews: 56, features: ['Diesel', '4x2', '7-Seater'], price: 5500, plate: 'STU-5678', fuel: 'Diesel', seats: 7, transmission: 'Automatic', owner: 'Ramon B.', contact: '+63 918 765 4321', address: '78 National Highway, Cagayan de Oro' },
-  { id: 8, brand: 'Mitsubishi Montero Sport', category: 'SUV', rating: 4.8, reviews: 48, features: ['Diesel', '4x4', 'Leather'], price: 6000, plate: 'VWX-9012', fuel: 'Diesel', seats: 7, transmission: 'Automatic', owner: 'Cristina T.', contact: '+63 925 678 9012', address: '45 Diversion Rd, Batangas City' },
-  { id: 9, brand: 'Nissan Terra VL', category: 'SUV', rating: 4.7, reviews: 33, features: ['Diesel', 'GPS', 'Camera'], price: 5200, plate: 'YZA-3456', fuel: 'Diesel', seats: 7, transmission: 'Automatic', owner: 'Mario F.', contact: '+63 919 012 3456', address: '123 JP Rizal, San Pablo City' },
-  { id: 10, brand: 'Toyota RAV4 G', category: 'Crossover', rating: 4.8, reviews: 41, features: ['Gas', 'AWD', 'Sunroof'], price: 4500, plate: 'BCD-7890', fuel: 'Gasoline', seats: 5, transmission: 'Automatic', owner: 'Luisa K.', contact: '+63 922 345 6789', address: '90 Sampaguita Ave, Metro Manila' },
-  { id: 11, brand: 'Honda CR-V S', category: 'Crossover', rating: 4.7, reviews: 37, features: ['Gas', 'CVT', '7-Seater'], price: 4800, plate: 'EFG-1234', fuel: 'Gasoline', seats: 7, transmission: 'CVT', owner: 'Danny P.', contact: '+63 916 789 0123', address: '23 Escario St, Cebu City' },
-  { id: 12, brand: 'Mitsubishi Xpander GLS', category: 'Minivan', rating: 4.6, reviews: 44, features: ['Gas', '7-Seat', 'AC'], price: 3500, plate: 'HIJ-5678', fuel: 'Gasoline', seats: 7, transmission: 'Automatic', owner: 'Grace A.', contact: '+63 921 234 5678', address: '56 F. Torres, Davao City' },
-  { id: 13, brand: 'Toyota Avanza 1.3 E', category: 'Minivan', rating: 4.5, reviews: 39, features: ['Gas', '7-Seat', 'Eco'], price: 2800, plate: 'KLM-9012', fuel: 'Gasoline', seats: 7, transmission: 'Manual', owner: 'Ricky N.', contact: '+63 913 456 7890', address: '78 Harrison St, Baguio City' },
-  { id: 14, brand: 'BMW 320d', category: 'Luxury', rating: 5.0, reviews: 18, features: ['Diesel', 'Leather', 'Premium'], price: 12000, plate: 'NOP-3456', fuel: 'Diesel', seats: 5, transmission: 'Automatic', owner: 'Vincent T.', contact: '+63 917 890 1234', address: '12 Forbes Town, Metro Manila' },
-  { id: 15, brand: 'Mercedes-Benz C200', category: 'Luxury', rating: 5.0, reviews: 15, features: ['Gas', 'AMG', 'Sunroof'], price: 15000, plate: 'QRS-7890', fuel: 'Gasoline', seats: 5, transmission: 'Automatic', owner: 'Isabel R.', contact: '+63 924 567 8901', address: '34 Ayala Ave, Metro Manila' },
-  { id: 16, brand: 'Toyota Vios 1.3 J', category: 'Economy', rating: 4.4, reviews: 62, features: ['M/T', 'AC', 'Basic'], price: 1200, plate: 'TUV-1234', fuel: 'Gasoline', seats: 5, transmission: 'Manual', owner: 'Efren Q.', contact: '+63 914 678 9012', address: '101 Quezon Blvd, San Pablo City' },
-  { id: 17, brand: 'Suzuki Celerio', category: 'Economy', rating: 4.3, reviews: 28, features: ['M/T', 'AC', 'Compact'], price: 1000, plate: 'WXY-5678', fuel: 'Gasoline', seats: 5, transmission: 'Manual', owner: 'Nenita B.', contact: '+63 923 890 1234', address: '55 Luna St, Iloilo City' },
-  { id: 18, brand: 'Mitsubishi Mirage GLX', category: 'Economy', rating: 4.4, reviews: 33, features: ['M/T', 'AC', 'Eco'], price: 1300, plate: 'ZAB-9012', fuel: 'Gasoline', seats: 5, transmission: 'Manual', owner: 'Tonyo M.', contact: '+63 911 234 5678', address: '88 Rizal Ext, Cagayan de Oro' }
+  { id: 1, brand: 'Toyota Vios 1.3 E', category: 'Sedan', rating: 4.8, reviews: 42, features: ['Auto', 'AC', 'GPS'], price: 2500, plate: 'ABC-1234', fuel: 'Gasoline', seats: 5, transmission: 'Automatic', owner: 'Carlos M.', contact: '+63 912 345 6789', address: '213 Rizal Ave, San Pablo City, Laguna', image: 'toyota vios 1.3 E.png' },
+  { id: 2, brand: 'Honda City RS', category: 'Sedan', rating: 4.9, reviews: 38, features: ['CVT', 'AC', 'Bluetooth'], price: 3200, plate: 'DEF-5678', fuel: 'Gasoline', seats: 5, transmission: 'CVT', owner: 'Maria S.', contact: '+63 917 890 1234', address: '56 P. Burgos St, Metro Manila', image: 'honda city rs.png' },
+  { id: 3, brand: 'Mitsubishi Mirage G4', category: 'Sedan', rating: 4.6, reviews: 29, features: ['M/T', 'AC', 'Eco'], price: 1800, plate: 'GHI-9012', fuel: 'Gasoline', seats: 5, transmission: 'Manual', owner: 'Jose R.', contact: '+63 923 456 7890', address: '12 Mabini St, Cebu City', image: 'mitsubishi mirage g4.png' },
+  { id: 4, brand: 'Toyota Wigo', category: 'Hatchback', rating: 4.7, reviews: 35, features: ['Auto', 'AC', 'Compact'], price: 1500, plate: 'JKL-3456', fuel: 'Gasoline', seats: 5, transmission: 'Automatic', owner: 'Ana L.', contact: '+63 908 765 4321', address: '89 Torres St, Davao City', image: 'toyota wigo.png' },
+  { id: 5, brand: 'Suzuki Swift GL', category: 'Hatchback', rating: 4.5, reviews: 22, features: ['M/T', 'AC', 'Sporty'], price: 2000, plate: 'MNO-7890', fuel: 'Gasoline', seats: 5, transmission: 'Manual', owner: 'Pedro D.', contact: '+63 915 678 9012', address: '34 Session Rd, Baguio City', image: 'suzuki swift gl.png' },
+  { id: 6, brand: 'Honda Brio', category: 'Hatchback', rating: 4.6, reviews: 31, features: ['Auto', 'AC', 'Eco'], price: 1700, plate: 'PQR-1234', fuel: 'Gasoline', seats: 5, transmission: 'Automatic', owner: 'Sofia G.', contact: '+63 920 123 4567', address: '67 Delgado St, Iloilo City', image: 'honda brio.png' },
+  { id: 7, brand: 'Toyota Fortuner 2.4 G', category: 'SUV', rating: 4.9, reviews: 56, features: ['Diesel', '4x2', '7-Seater'], price: 5500, plate: 'STU-5678', fuel: 'Diesel', seats: 7, transmission: 'Automatic', owner: 'Ramon B.', contact: '+63 918 765 4321', address: '78 National Highway, Cagayan de Oro', image: 'toyota fortuner 2.4 G.png' },
+  { id: 8, brand: 'Mitsubishi Montero Sport', category: 'SUV', rating: 4.8, reviews: 48, features: ['Diesel', '4x4', 'Leather'], price: 6000, plate: 'VWX-9012', fuel: 'Diesel', seats: 7, transmission: 'Automatic', owner: 'Cristina T.', contact: '+63 925 678 9012', address: '45 Diversion Rd, Batangas City', image: 'mitsubishi montero sport.png' },
+  { id: 9, brand: 'Nissan Terra VL', category: 'SUV', rating: 4.7, reviews: 33, features: ['Diesel', 'GPS', 'Camera'], price: 5200, plate: 'YZA-3456', fuel: 'Diesel', seats: 7, transmission: 'Automatic', owner: 'Mario F.', contact: '+63 919 012 3456', address: '123 JP Rizal, San Pablo City', image: 'nissan terra vl.png' },
+  { id: 10, brand: 'Toyota RAV4 G', category: 'Crossover', rating: 4.8, reviews: 41, features: ['Gas', 'AWD', 'Sunroof'], price: 4500, plate: 'BCD-7890', fuel: 'Gasoline', seats: 5, transmission: 'Automatic', owner: 'Luisa K.', contact: '+63 922 345 6789', address: '90 Sampaguita Ave, Metro Manila', image: 'toyota rav4 G.png' },
+  { id: 11, brand: 'Honda CR-V S', category: 'Crossover', rating: 4.7, reviews: 37, features: ['Gas', 'CVT', '7-Seater'], price: 4800, plate: 'EFG-1234', fuel: 'Gasoline', seats: 7, transmission: 'CVT', owner: 'Danny P.', contact: '+63 916 789 0123', address: '23 Escario St, Cebu City', image: 'honda cr-v s.png' },
+  { id: 12, brand: 'Mitsubishi Xpander GLS', category: 'Minivan', rating: 4.6, reviews: 44, features: ['Gas', '7-Seat', 'AC'], price: 3500, plate: 'HIJ-5678', fuel: 'Gasoline', seats: 7, transmission: 'Automatic', owner: 'Grace A.', contact: '+63 921 234 5678', address: '56 F. Torres, Davao City', image: 'mitsubishi xpander gls.png' },
+  { id: 13, brand: 'Toyota Avanza 1.3 E', category: 'Minivan', rating: 4.5, reviews: 39, features: ['Gas', '7-Seat', 'Eco'], price: 2800, plate: 'KLM-9012', fuel: 'Gasoline', seats: 7, transmission: 'Manual', owner: 'Ricky N.', contact: '+63 913 456 7890', address: '78 Harrison St, Baguio City', image: 'toyota avanza 1.3 E.png' },
+  { id: 14, brand: 'BMW 320d', category: 'Luxury', rating: 5.0, reviews: 18, features: ['Diesel', 'Leather', 'Premium'], price: 12000, plate: 'NOP-3456', fuel: 'Diesel', seats: 5, transmission: 'Automatic', owner: 'Vincent T.', contact: '+63 917 890 1234', address: '12 Forbes Town, Metro Manila', image: 'BMW 320d.png' },
+  { id: 15, brand: 'Mercedes-Benz C200', category: 'Luxury', rating: 5.0, reviews: 15, features: ['Gas', 'AMG', 'Sunroof'], price: 15000, plate: 'QRS-7890', fuel: 'Gasoline', seats: 5, transmission: 'Automatic', owner: 'Isabel R.', contact: '+63 924 567 8901', address: '34 Ayala Ave, Metro Manila', image: 'mercedes-benz c200.png' },
+  { id: 16, brand: 'Toyota Vios 1.3 J', category: 'Economy', rating: 4.4, reviews: 62, features: ['M/T', 'AC', 'Basic'], price: 1200, plate: 'TUV-1234', fuel: 'Gasoline', seats: 5, transmission: 'Manual', owner: 'Efren Q.', contact: '+63 914 678 9012', address: '101 Quezon Blvd, San Pablo City', image: 'toyota vios 1.3 j.png' },
+  { id: 17, brand: 'Suzuki Celerio', category: 'Economy', rating: 4.3, reviews: 28, features: ['M/T', 'AC', 'Compact'], price: 1000, plate: 'WXY-5678', fuel: 'Gasoline', seats: 5, transmission: 'Manual', owner: 'Nenita B.', contact: '+63 923 890 1234', address: '55 Luna St, Iloilo City', image: 'suzuki celerio.png' },
+  { id: 18, brand: 'Mitsubishi Mirage GLX', category: 'Economy', rating: 4.4, reviews: 33, features: ['M/T', 'AC', 'Eco'], price: 1300, plate: 'ZAB-9012', fuel: 'Gasoline', seats: 5, transmission: 'Manual', owner: 'Tonyo M.', contact: '+63 911 234 5678', address: '88 Rizal Ext, Cagayan de Oro', image: 'mitsubishi mirage glx.png' }
 ];
 
 // ===== DOM REFS =====
@@ -217,8 +217,10 @@ function renderCarGrid() {
     // Features badges
     const featuresHtml = car.features.map(f => `<span class="car-card-feature">${f}</span>`).join('');
 
-    // SVG Car icon for image placeholder
-    const carSvg = `<svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+    // Use actual image if available, otherwise SVG placeholder
+    const carImageHtml = car.image 
+      ? `<img src="${car.image}" alt="${car.brand}" style="width: 100%; height: 100%; object-fit: cover;">`
+      : `<svg width="80" height="80" viewBox="0 0 80 80" fill="none">
       <rect x="10" y="30" width="60" height="25" rx="6" fill="#06B6D4" opacity="0.3"/>
       <path d="M15 50L20 38L30 32H50L60 38L65 50H58L54 45H26L22 50H15Z" fill="#06B6D4" opacity="0.5"/>
       <circle cx="28" cy="52" r="7" fill="#1E293B" stroke="#06B6D4" stroke-width="1.5"/>
@@ -227,7 +229,7 @@ function renderCarGrid() {
     </svg>`;
 
     card.innerHTML = `
-      <div class="car-card-image">${carSvg}</div>
+      <div class="car-card-image">${carImageHtml}</div>
       <div class="car-card-body">
         <div class="car-card-title">${car.brand}</div>
         <div class="car-card-rating">
@@ -285,19 +287,22 @@ function renderCarDetails(car) {
     else starsHtml += '☆';
   }
 
-  const carSvg = `<svg width="100" height="100" viewBox="0 0 80 80" fill="none">
-    <rect x="10" y="30" width="60" height="25" rx="6" fill="#06B6D4" opacity="0.3"/>
-    <path d="M15 50L20 38L30 32H50L60 38L65 50H58L54 45H26L22 50H15Z" fill="#06B6D4" opacity="0.5"/>
-    <circle cx="28" cy="52" r="7" fill="#1E293B" stroke="#06B6D4" stroke-width="1.5"/>
-    <circle cx="52" cy="52" r="7" fill="#1E293B" stroke="#06B6D4" stroke-width="1.5"/>
-  </svg>`;
+  // Use actual image if available, otherwise SVG placeholder
+  const carImageHtml = car.image 
+    ? `<img src="${car.image}" alt="${car.brand}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">`
+    : `<svg width="100" height="100" viewBox="0 0 80 80" fill="none">
+      <rect x="10" y="30" width="60" height="25" rx="6" fill="#06B6D4" opacity="0.3"/>
+      <path d="M15 50L20 38L30 32H50L60 38L65 50H58L54 45H26L22 50H15Z" fill="#06B6D4" opacity="0.5"/>
+      <circle cx="28" cy="52" r="7" fill="#1E293B" stroke="#06B6D4" stroke-width="1.5"/>
+      <circle cx="52" cy="52" r="7" fill="#1E293B" stroke="#06B6D4" stroke-width="1.5"/>
+    </svg>`;
 
   panelContent.innerHTML = `
     <div class="panel-header">
       <div class="panel-title">${car.brand}</div>
       <button class="panel-close" onclick="closePanel()">✕</button>
     </div>
-    <div class="detail-car-image">${carSvg}</div>
+    <div class="detail-car-image">${carImageHtml}</div>
     <div style="display:flex;align-items:center;gap:4px;margin-bottom:16px;font-size:14px;color:#F59E0B;">
       ${starsHtml} <span style="color:#94A3B8;margin-left:4px;">${car.rating} (${car.reviews} reviews)</span>
     </div>
