@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EasyGoRental - Car Rental Marketplace</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- SCREEN 1: SPLASH / WELCOME -->
+  <div id="splash-screen" class="screen">
+    <div class="splash-content">
+      <div class="splash-logo">
+        <img src="LOGO.png.png" alt="EasyGoRental" class="splash-logo-img">
+      </div>
+      <h1 class="splash-title">EasyGoRental</h1>
+      <p class="splash-tagline">Drive your adventure. Rent with confidence.</p>
+      <button id="splash-btn" class="btn-primary neon-btn">Let's Get Started</button>
+    </div>
+  </div>
+
+  <!-- SCREEN 2: LOGIN / SIGN UP -->
+  <div id="login-screen" class="screen hidden">
+    <div class="form-container fade-in">
+      <div class="form-logo">
+        <img src="LOGO.png.png" alt="EasyGoRental" class="form-logo-img">
+      </div>
+      <h2 id="form-title">Login</h2>
+      <div id="login-error" class="error-msg hidden"></div>
+      <div class="input-group">
+        <input type="email" id="email-input" placeholder="Email Address" autocomplete="email">
+      </div>
+      <div class="input-group">
+        <input type="password" id="password-input" placeholder="Password" autocomplete="current-password">
+      </div>
+      <button id="login-btn" class="btn-primary neon-btn">LOGIN</button>
+      <p class="toggle-form">Don't have an account? <span id="toggle-auth-link">Sign Up</span></p>
+    </div>
+  </div>
+
+  <!-- SCREEN 3: NAME ENTRY -->
+  <div id="name-screen" class="screen hidden">
+    <div class="form-container fade-in">
+      <div class="form-logo">
+        <img src="LOGO.png.png" alt="EasyGoRental" class="form-logo-img">
+      </div>
+      <h2 class="name-heading">Welcome! What's your name?</h2>
+      <div class="input-group">
+        <input type="text" id="name-input" placeholder="ENTER YOUR NAME" maxlength="30">
+      </div>
+      <button id="continue-btn" class="btn-primary neon-btn">CONTINUE</button>
+    </div>
+  </div>
+
+  <!-- CORE APP SPLIT DASHBOARD -->
+  <div id="core-app" class="hidden core-app-wrapper">
+    <!-- LEFT SIDEBAR NAV -->
+    <aside id="left-sidebar" class="sidebar">
+      <div class="sidebar-brand">
+        <img src="LOGO.png.png" alt="EasyGoRental" class="sidebar-logo-img">
+        <span class="brand-text">EasyGoRental</span>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="nav-item active" data-tab="dashboard">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="2" width="6" height="6" rx="1" fill="currentColor"/><rect x="12" y="2" width="6" height="6" rx="1" fill="currentColor" opacity="0.5"/><rect x="2" y="12" width="6" height="6" rx="1" fill="currentColor" opacity="0.5"/><rect x="12" y="12" width="6" height="6" rx="1" fill="currentColor" opacity="0.5"/></svg>
+          <span>Dashboard</span>
+        </div>
+        <div class="nav-item" data-tab="bookings">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="2" width="14" height="16" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="3" y1="6" x2="17" y2="6" stroke="currentColor" stroke-width="1.5"/><line x1="10" y1="10" x2="14" y2="10" stroke="currentColor" stroke-width="1.5"/><line x1="10" y1="14" x2="14" y2="14" stroke="currentColor" stroke-width="1.5"/></svg>
+          <span>My Bookings</span>
+        </div>
+        <div class="nav-item" data-tab="profile">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="7" r="3" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M3 18C3 14.6863 6.13401 12 10 12C13.866 12 17 14.6863 17 18" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+          <span>Profile</span>
+        </div>
+        <div class="nav-item" data-tab="return-car">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 3L10 17M10 17L5 12M10 17L15 12" stroke="currentColor" stroke-width="1.5"/></svg>
+          <span>Return Car</span>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- CENTRAL MARKETPLACE HUB -->
+    <main id="central-hub" class="central-hub">
+      <header class="hub-header">
+        <div class="header-left">
+          <h2 id="greeting-text" class="greeting">Hello, User!</h2>
+          <div id="active-booking-pill" class="booking-pill hidden" onclick="showActiveBooking()">
+            <svg width="14" height="14" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="3" fill="#06B6D4"/></svg>
+            Active Rental
+          </div>
+        </div>
+        <div class="header-right">
+          <div id="profile-btn" class="profile-circle" onclick="openProfilePanel()">
+            <span id="profile-avatar-text">U</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Location Selector -->
+      <div class="location-selector">
+        <svg width="16" height="16" viewBox="0 0 20 20" fill="none"><path d="M10 2C6.13 2 3 5.13 3 9C3 13.25 10 19 10 19C10 19 17 13.25 17 9C17 5.13 13.87 2 10 2Z" stroke="#06B6D4" stroke-width="1.5" fill="none"/><circle cx="10" cy="9" r="2" stroke="#06B6D4" stroke-width="1.5" fill="none"/></svg>
+        <select id="location-select">
+          <option>San Pablo City, Laguna</option>
+          <option>Metro Manila</option>
+          <option>Cebu City</option>
+          <option>Davao City</option>
+          <option>Baguio City</option>
+          <option>Iloilo City</option>
+          <option>Cagayan de Oro</option>
+          <option>Batangas City</option>
+        </select>
+      </div>
+
+      <!-- Search -->
+      <div class="search-bar">
+        <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="9" cy="9" r="6" stroke="#555" stroke-width="1.5" fill="none"/><line x1="13.5" y1="13.5" x2="18" y2="18" stroke="#555" stroke-width="1.5"/></svg>
+        <input type="text" id="car-search" placeholder="Search cars..." oninput="filterCars()">
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="filter-pills" id="filter-pills">
+        <span class="pill active" data-category="all" onclick="setFilter('all', this)">All</span>
+        <span class="pill" data-category="Sedan" onclick="setFilter('Sedan', this)">Sedan</span>
+        <span class="pill" data-category="Hatchback" onclick="setFilter('Hatchback', this)">Hatchback</span>
+        <span class="pill" data-category="SUV" onclick="setFilter('SUV', this)">SUV</span>
+        <span class="pill" data-category="Crossover" onclick="setFilter('Crossover', this)">Crossover</span>
+        <span class="pill" data-category="Minivan" onclick="setFilter('Minivan', this)">Minivan / MPV</span>
+        <span class="pill" data-category="Luxury" onclick="setFilter('Luxury', this)">Luxury</span>
+        <span class="pill" data-category="Economy" onclick="setFilter('Economy', this)">Economy</span>
+      </div>
+
+      <!-- Car Grid -->
+      <div class="car-grid" id="car-grid"></div>
+    </main>
+
+    <!-- RIGHT SIDE WORKFLOW PANEL -->
+    <aside id="right-panel" class="right-panel">
+      <div class="panel-placeholder" id="panel-placeholder">
+        <img src="LOGO.png.png" alt="EasyGoRental" class="panel-placeholder-logo">
+        <p>Select a car to view details</p>
+      </div>
+      <div id="panel-content" class="panel-content hidden"></div>
+    </aside>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
