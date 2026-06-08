@@ -118,6 +118,12 @@
         <input type="text" id="car-search" placeholder="Search cars..." oninput="filterCars()">
       </div>
 
+      <!-- Driver Toggle Buttons -->
+      <div class="driver-toggle">
+        <button id="toggle-self-drive" class="toggle-btn active" onclick="setDriverMode('self', this)">🚗 Self-Driving</button>
+        <button id="toggle-with-driver" class="toggle-btn" onclick="setDriverMode('driver', this)">🧑‍✈️ With Driver</button>
+      </div>
+
       <!-- Category Filter Pills -->
       <div class="filter-pills" id="filter-pills">
         <span class="pill active" data-category="all" onclick="setFilter('all', this)">All</span>
